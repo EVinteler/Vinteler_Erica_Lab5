@@ -32,7 +32,7 @@ public partial class MainWindow : Window
 
         ActionState action = ActionState.Nothing;
         PhoneNumbers3DataSet phoneNumbers3DataSet = new PhoneNumbers3DataSet();
-        PhoneNumbers3DataSetTableAdapters.PhoneNumbers3TableAdapter tblPhoneNumbers3Adapter = new PhoneNumbers3DataSetTableAdapters.PhoneNumbers3TableAdapter();
+        PhoneNumbers3DataSetTableAdapters.TableTableAdapter tblPhoneNumbers3Adapter = new PhoneNumbers3DataSetTableAdapters.TableTableAdapter();
         Binding txtPhoneNumberBinding = new Binding();
         Binding txtSubscriberBinding = new Binding();
         Binding txtContactValueBinding = new Binding();
@@ -42,7 +42,7 @@ public partial class MainWindow : Window
         {
             InitializeComponent();
 
-            grdMain.DataContext = phoneNumbers3DataSet.PhoneNumbers3;
+            grdMain.DataContext = phoneNumbers3DataSet.Table;
             txtPhoneNumberBinding.Path = new PropertyPath("Phonenum");
             txtSubscriberBinding.Path = new PropertyPath("Subscriber");
             txtPhoneNumber.SetBinding(TextBox.TextProperty, txtPhoneNumberBinding);
@@ -53,7 +53,7 @@ public partial class MainWindow : Window
         }
         private void lstPhonesLoad()
         {
-            tblPhoneNumbers3Adapter.Fill(phoneNumbers3DataSet.PhoneNumbers3);
+            tblPhoneNumbers3Adapter.Fill(phoneNumbers3DataSet.Table);
         }
         private void grdMain_Loaded(object sender, RoutedEventArgs e)
         {
@@ -181,15 +181,15 @@ public partial class MainWindow : Window
             {
                 try
                 {
-                    DataRow newRow = phoneNumbers3DataSet.PhoneNumbers3.NewRow();
+                    DataRow newRow = phoneNumbers3DataSet.Table.NewRow();
                     newRow.BeginEdit();
                     newRow["Phonenum"] = txtPhoneNumber.Text.Trim();
                     newRow["Subscriber"] = txtSubscriber.Text.Trim();
                     newRow["Contact_value"] = txtContactValue.Text.Trim();
                     newRow["Contact_date"] = txtContactDate.Text.Trim();
                     newRow.EndEdit();
-                    phoneNumbers3DataSet.PhoneNumbers3.Rows.Add(newRow);
-                    tblPhoneNumbers3Adapter.Update(phoneNumbers3DataSet.PhoneNumbers3);
+                    phoneNumbers3DataSet.Table.Rows.Add(newRow);
+                    tblPhoneNumbers3Adapter.Update(phoneNumbers3DataSet.Table);
                     phoneNumbers3DataSet.AcceptChanges();
                 }
                 catch (DataException ex)
@@ -214,14 +214,14 @@ public partial class MainWindow : Window
             {
                 try
                 {
-                    DataRow editRow = phoneNumbers3DataSet.PhoneNumbers3.Rows[lstPhones.SelectedIndex];
+                    DataRow editRow = phoneNumbers3DataSet.Table.Rows[lstPhones.SelectedIndex];
                     editRow.BeginEdit();
                     editRow["Phonenum"] = txtPhoneNumber.Text.Trim();
                     editRow["Subscriber"] = txtSubscriber.Text.Trim();
-                    newRow["Contact_value"] = txtContactValue.Text.Trim();
-                    newRow["Contact_date"] = txtContactDate.Text.Trim();
+                    editRow["Contact_value"] = txtContactValue.Text.Trim();
+                    editRow["Contact_date"] = txtContactDate.Text.Trim();
                     editRow.EndEdit();
-                    tblPhoneNumbers3Adapter.Update(phoneNumbers3DataSet.PhoneNumbers3);
+                    tblPhoneNumbers3Adapter.Update(phoneNumbers3DataSet.Table);
                     phoneNumbers3DataSet.AcceptChanges();
                 }
                 catch (DataException ex)
@@ -251,10 +251,10 @@ public partial class MainWindow : Window
             {
                 try
                 {
-                    DataRow deleterow = phoneNumbers3DataSet.PhoneNumbers3.Rows[lstPhones.SelectedIndex];
+                    DataRow deleterow = phoneNumbers3DataSet.Table.Rows[lstPhones.SelectedIndex];
                     deleterow.Delete();
 
-                    tblPhoneNumbers3Adapter.Update(phoneNumbers3DataSet.PhoneNumbers3);
+                    tblPhoneNumbers3Adapter.Update(phoneNumbers3DataSet.Table);
                     phoneNumbers3DataSet.AcceptChanges();
                 }
                 catch (DataException ex)
@@ -283,13 +283,12 @@ public partial class MainWindow : Window
         private void btnPrevious_Click(object sender, RoutedEventArgs e)
         {
             //using System.ComponentModel
-            ICollectionView navigationView = CollectionViewSource.GetDefaultView(phoneNumbers3DataSet.PhoneNumbers3);
+            ICollectionView navigationView = CollectionViewSource.GetDefaultView(phoneNumbers3DataSet.Table);
             navigationView.MoveCurrentToPrevious();
         }
         private void btnNext_Click(object sender, RoutedEventArgs e)
         {
-            ICollectionView navigationView =
-           CollectionViewSource.GetDefaultView(phoneNumbers3DataSet.PhoneNumbers3);
+            ICollectionView navigationView = CollectionViewSource.GetDefaultView(phoneNumbers3DataSet.Table);
             navigationView.MoveCurrentToNext();
         }
 
