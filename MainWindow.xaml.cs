@@ -47,8 +47,8 @@ public partial class MainWindow : Window
             txtSubscriberBinding.Path = new PropertyPath("Subscriber");
             txtPhoneNumber.SetBinding(TextBox.TextProperty, txtPhoneNumberBinding);
             txtSubscriber.SetBinding(TextBox.TextProperty, txtSubscriberBinding);
-            txtContactValue.SetBinding(TextBox.TextProperty, txtContactValueBinding);
-            txtContactDate.SetBinding(TextBox.TextProperty, txtContactDateBinding);
+            //txtContactValue.SetBinding(TextBox.TextProperty, txtContactValueBinding);
+            //txtContactDate.SetBinding(TextBox.TextProperty, txtContactDateBinding);
 
         }
         private void lstPhonesLoad()
