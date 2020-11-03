@@ -7,6 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <WindowsFormsHost x:Name="frmMain" HorizontalAlignment="Left" Height="100" Margin="323,112,0,0" VerticalAlignment="Top" Width="100"/>
+        <Button x:Name="btnNew" Content="New" HorizontalAlignment="Left" Margin="251,132,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnEdit" Content="Edit" HorizontalAlignment="Left" Margin="305,142,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Margin="374,152,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="490,172,0,0" VerticalAlignment="Top" IsEnabled="False"/>
+        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="510,209,0,0" VerticalAlignment="Top" IsEnabled="False"/>
 
     </Grid>
 </Window>
