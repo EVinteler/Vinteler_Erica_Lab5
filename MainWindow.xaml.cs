@@ -49,5 +49,24 @@ public partial class MainWindow : Window
         {
             tblPhoneNumbersAdapter.Fill(phoneNumbersDataSet.PhoneNumbers);
         }
+        private void grdMain_Loaded(object sender, RoutedEventArgs e)
+        {
+            lstPhonesLoad();
+        }
+        private void btnExit_Click(object sender, RoutedEventArgs e)
+        {
+            if (MessageBox.Show("Close Application?", "Question", MessageBoxButton.YesNo,
+           MessageBoxImage.Warning) == MessageBoxResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        private void frmMain_Loaded(object sender, RoutedEventArgs e)
+        {
+            PhoneNumbersDataSet phoneNumbersDataSet = ((PhoneNumbersDataSet)(this.FindResource("phoneNumbersDataSet")));
+            System.Windows.Data.CollectionViewSource phoneNumbersViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("phoneNumbersViewSource")));
+            phoneNumbersViewSource.View.MoveCurrentToFirst();
+        }
     }
 }
