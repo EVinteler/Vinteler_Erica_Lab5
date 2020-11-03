@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <None Remove="PhoneNumbers.mdf" />
+    <None Remove="PhoneNumbers3.mdf" />
   </ItemGroup>
 
   <ItemGroup>
@@ -16,6 +17,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="PhoneNumbers3DataSet.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>PhoneNumbers3DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Update="PhoneNumbersDataSet.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -24,6 +30,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="PhoneNumbers3DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PhoneNumbers3DataSet.Designer.cs</LastGenOutput>
+    </None>
     <None Update="PhoneNumbersDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>PhoneNumbersDataSet.Designer.cs</LastGenOutput>

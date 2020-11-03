@@ -248,5 +248,6 @@ public partial class MainWindow : Window
            CollectionViewSource.GetDefaultView(phoneNumbersDataSet.PhoneNumbers);
             navigationView.MoveCurrentToNext();
         }
+
     }
 }
