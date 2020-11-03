@@ -6,13 +6,21 @@
         xmlns:local="clr-namespace:Vinteler_Erica_Lab5"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <WindowsFormsHost x:Name="frmMain" HorizontalAlignment="Left" Height="100" Margin="323,112,0,0" VerticalAlignment="Top" Width="100"/>
-        <Button x:Name="btnNew" Content="New" HorizontalAlignment="Left" Margin="251,132,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnEdit" Content="Edit" HorizontalAlignment="Left" Margin="305,142,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Margin="374,152,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="490,172,0,0" VerticalAlignment="Top" IsEnabled="False"/>
-        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="510,209,0,0" VerticalAlignment="Top" IsEnabled="False"/>
+    <Grid Margin="0,0,10,0">
+        <WindowsFormsHost x:Name="frmMain" HorizontalAlignment="Left" Height="100" Margin="181,116,0,0" VerticalAlignment="Top" Width="100"/>
+        <Button x:Name="btnNew" Content="New" HorizontalAlignment="Left" Margin="22,13,0,0" VerticalAlignment="Top" Width="70"/>
+        <Button x:Name="btnEdit" Content="Edit" HorizontalAlignment="Left" Margin="22,55,0,0" VerticalAlignment="Top" Width="70"/>
+        <Button x:Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Margin="22,96,0,0" VerticalAlignment="Top" Width="70"/>
+        <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="162,408,0,0" VerticalAlignment="Top" IsEnabled="False" Width="70"/>
+        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="555,408,0,0" VerticalAlignment="Top" IsEnabled="False" Width="70"/>
+        <ListBox x:Name="lstPhones" Margin="162,13,165,161" Background="#FFDDDDDD"/>
+        <Button x:Name="btnExit" Content="Exit" HorizontalAlignment="Left" Margin="22,143,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="70" Height="46"/>
+        <Button x:Name="btnNext" Content="Next" HorizontalAlignment="Left" Margin="162,297,0,0" VerticalAlignment="Top" Width="70"/>
+        <Button x:Name="btnPrevious" Content="Prev" HorizontalAlignment="Left" Margin="555,297,0,0" VerticalAlignment="Top" Width="70"/>
+        <Label x:Name="lblPhoneNum" Content="Phone Number:" HorizontalAlignment="Left" Margin="197,333,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblSubscriber" Content="Subscriber:" HorizontalAlignment="Left" Margin="197,367,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtPhoneNumber" HorizontalAlignment="Left" Margin="358,342,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="232" IsEnabled="False" Height="17"/>
+        <TextBox x:Name="txtSubscriber_" HorizontalAlignment="Left" Margin="358,375,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="232" IsEnabled="False"/>
 
     </Grid>
 </Window>
