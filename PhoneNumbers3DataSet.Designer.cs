@@ -24,7 +24,7 @@ namespace Vinteler_Erica_Lab5 {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class PhoneNumbers3DataSet : global::System.Data.DataSet {
         
-        private TableDataTable tableTable;
+        private PhoneNumbers3DataTable tablePhoneNumbers3;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -54,8 +54,8 @@ namespace Vinteler_Erica_Lab5 {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Table"] != null)) {
-                    base.Tables.Add(new TableDataTable(ds.Tables["Table"]));
+                if ((ds.Tables["PhoneNumbers3"] != null)) {
+                    base.Tables.Add(new PhoneNumbers3DataTable(ds.Tables["PhoneNumbers3"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace Vinteler_Erica_Lab5 {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public TableDataTable Table {
+        public PhoneNumbers3DataTable PhoneNumbers3 {
             get {
-                return this.tableTable;
+                return this.tablePhoneNumbers3;
             }
         }
         
@@ -152,8 +152,8 @@ namespace Vinteler_Erica_Lab5 {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Table"] != null)) {
-                    base.Tables.Add(new TableDataTable(ds.Tables["Table"]));
+                if ((ds.Tables["PhoneNumbers3"] != null)) {
+                    base.Tables.Add(new PhoneNumbers3DataTable(ds.Tables["PhoneNumbers3"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace Vinteler_Erica_Lab5 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableTable = ((TableDataTable)(base.Tables["Table"]));
+            this.tablePhoneNumbers3 = ((PhoneNumbers3DataTable)(base.Tables["PhoneNumbers3"]));
             if ((initTable == true)) {
-                if ((this.tableTable != null)) {
-                    this.tableTable.InitVars();
+                if ((this.tablePhoneNumbers3 != null)) {
+                    this.tablePhoneNumbers3.InitVars();
                 }
             }
         }
@@ -204,13 +204,13 @@ namespace Vinteler_Erica_Lab5 {
             this.Namespace = "http://tempuri.org/PhoneNumbers3DataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableTable = new TableDataTable();
-            base.Tables.Add(this.tableTable);
+            this.tablePhoneNumbers3 = new PhoneNumbers3DataTable();
+            base.Tables.Add(this.tablePhoneNumbers3);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeTable() {
+        private bool ShouldSerializePhoneNumbers3() {
             return false;
         }
         
@@ -270,14 +270,14 @@ namespace Vinteler_Erica_Lab5 {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void TableRowChangeEventHandler(object sender, TableRowChangeEvent e);
+        public delegate void PhoneNumbers3RowChangeEventHandler(object sender, PhoneNumbers3RowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class TableDataTable : global::System.Data.TypedTableBase<TableRow> {
+        public partial class PhoneNumbers3DataTable : global::System.Data.TypedTableBase<PhoneNumbers3Row> {
             
             private global::System.Data.DataColumn columnId;
             
@@ -291,8 +291,8 @@ namespace Vinteler_Erica_Lab5 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public TableDataTable() {
-                this.TableName = "Table";
+            public PhoneNumbers3DataTable() {
+                this.TableName = "PhoneNumbers3";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -300,7 +300,7 @@ namespace Vinteler_Erica_Lab5 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal TableDataTable(global::System.Data.DataTable table) {
+            internal PhoneNumbers3DataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -317,7 +317,7 @@ namespace Vinteler_Erica_Lab5 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected TableDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected PhoneNumbers3DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -373,56 +373,56 @@ namespace Vinteler_Erica_Lab5 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public TableRow this[int index] {
+            public PhoneNumbers3Row this[int index] {
                 get {
-                    return ((TableRow)(this.Rows[index]));
+                    return ((PhoneNumbers3Row)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event TableRowChangeEventHandler TableRowChanging;
+            public event PhoneNumbers3RowChangeEventHandler PhoneNumbers3RowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event TableRowChangeEventHandler TableRowChanged;
+            public event PhoneNumbers3RowChangeEventHandler PhoneNumbers3RowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event TableRowChangeEventHandler TableRowDeleting;
+            public event PhoneNumbers3RowChangeEventHandler PhoneNumbers3RowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event TableRowChangeEventHandler TableRowDeleted;
+            public event PhoneNumbers3RowChangeEventHandler PhoneNumbers3RowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddTableRow(TableRow row) {
+            public void AddPhoneNumbers3Row(PhoneNumbers3Row row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public TableRow AddTableRow(string Phonenum, string Subscriber, int Contact_value, System.DateTime Contact_date) {
-                TableRow rowTableRow = ((TableRow)(this.NewRow()));
+            public PhoneNumbers3Row AddPhoneNumbers3Row(string Phonenum, string Subscriber, int Contact_value, System.DateTime Contact_date) {
+                PhoneNumbers3Row rowPhoneNumbers3Row = ((PhoneNumbers3Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Phonenum,
                         Subscriber,
                         Contact_value,
                         Contact_date};
-                rowTableRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowTableRow);
-                return rowTableRow;
+                rowPhoneNumbers3Row.ItemArray = columnValuesArray;
+                this.Rows.Add(rowPhoneNumbers3Row);
+                return rowPhoneNumbers3Row;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public TableRow FindById(int Id) {
-                return ((TableRow)(this.Rows.Find(new object[] {
+            public PhoneNumbers3Row FindById(int Id) {
+                return ((PhoneNumbers3Row)(this.Rows.Find(new object[] {
                             Id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                TableDataTable cln = ((TableDataTable)(base.Clone()));
+                PhoneNumbers3DataTable cln = ((PhoneNumbers3DataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -430,7 +430,7 @@ namespace Vinteler_Erica_Lab5 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new TableDataTable();
+                return new PhoneNumbers3DataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -470,39 +470,32 @@ namespace Vinteler_Erica_Lab5 {
                 this.columnSubscriber.MaxLength = 20;
                 this.columnContact_value.AllowDBNull = false;
                 this.columnContact_date.AllowDBNull = false;
-                this.ExtendedProperties.Add("Generator_RowClassName", "TableRow");
-                this.ExtendedProperties.Add("Generator_RowEvArgName", "TableRowChangeEvent");
-                this.ExtendedProperties.Add("Generator_RowEvHandlerName", "TableRowChangeEventHandler");
-                this.ExtendedProperties.Add("Generator_TableClassName", "TableDataTable");
-                this.ExtendedProperties.Add("Generator_TablePropName", "Table");
-                this.ExtendedProperties.Add("Generator_TableVarName", "tableTable");
-                this.ExtendedProperties.Add("Generator_UserTableName", "Table");
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public TableRow NewTableRow() {
-                return ((TableRow)(this.NewRow()));
+            public PhoneNumbers3Row NewPhoneNumbers3Row() {
+                return ((PhoneNumbers3Row)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new TableRow(builder);
+                return new PhoneNumbers3Row(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(TableRow);
+                return typeof(PhoneNumbers3Row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.TableRowChanged != null)) {
-                    this.TableRowChanged(this, new TableRowChangeEvent(((TableRow)(e.Row)), e.Action));
+                if ((this.PhoneNumbers3RowChanged != null)) {
+                    this.PhoneNumbers3RowChanged(this, new PhoneNumbers3RowChangeEvent(((PhoneNumbers3Row)(e.Row)), e.Action));
                 }
             }
             
@@ -510,8 +503,8 @@ namespace Vinteler_Erica_Lab5 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.TableRowChanging != null)) {
-                    this.TableRowChanging(this, new TableRowChangeEvent(((TableRow)(e.Row)), e.Action));
+                if ((this.PhoneNumbers3RowChanging != null)) {
+                    this.PhoneNumbers3RowChanging(this, new PhoneNumbers3RowChangeEvent(((PhoneNumbers3Row)(e.Row)), e.Action));
                 }
             }
             
@@ -519,8 +512,8 @@ namespace Vinteler_Erica_Lab5 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.TableRowDeleted != null)) {
-                    this.TableRowDeleted(this, new TableRowChangeEvent(((TableRow)(e.Row)), e.Action));
+                if ((this.PhoneNumbers3RowDeleted != null)) {
+                    this.PhoneNumbers3RowDeleted(this, new PhoneNumbers3RowChangeEvent(((PhoneNumbers3Row)(e.Row)), e.Action));
                 }
             }
             
@@ -528,14 +521,14 @@ namespace Vinteler_Erica_Lab5 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.TableRowDeleting != null)) {
-                    this.TableRowDeleting(this, new TableRowChangeEvent(((TableRow)(e.Row)), e.Action));
+                if ((this.PhoneNumbers3RowDeleting != null)) {
+                    this.PhoneNumbers3RowDeleting(this, new PhoneNumbers3RowChangeEvent(((PhoneNumbers3Row)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveTableRow(TableRow row) {
+            public void RemovePhoneNumbers3Row(PhoneNumbers3Row row) {
                 this.Rows.Remove(row);
             }
             
@@ -562,7 +555,7 @@ namespace Vinteler_Erica_Lab5 {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "TableDataTable";
+                attribute2.FixedValue = "PhoneNumbers3DataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -606,25 +599,25 @@ namespace Vinteler_Erica_Lab5 {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class TableRow : global::System.Data.DataRow {
+        public partial class PhoneNumbers3Row : global::System.Data.DataRow {
             
-            private TableDataTable tableTable;
+            private PhoneNumbers3DataTable tablePhoneNumbers3;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal TableRow(global::System.Data.DataRowBuilder rb) : 
+            internal PhoneNumbers3Row(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableTable = ((TableDataTable)(this.Table));
+                this.tablePhoneNumbers3 = ((PhoneNumbers3DataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int Id {
                 get {
-                    return ((int)(this[this.tableTable.IdColumn]));
+                    return ((int)(this[this.tablePhoneNumbers3.IdColumn]));
                 }
                 set {
-                    this[this.tableTable.IdColumn] = value;
+                    this[this.tablePhoneNumbers3.IdColumn] = value;
                 }
             }
             
@@ -632,10 +625,10 @@ namespace Vinteler_Erica_Lab5 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string Phonenum {
                 get {
-                    return ((string)(this[this.tableTable.PhonenumColumn]));
+                    return ((string)(this[this.tablePhoneNumbers3.PhonenumColumn]));
                 }
                 set {
-                    this[this.tableTable.PhonenumColumn] = value;
+                    this[this.tablePhoneNumbers3.PhonenumColumn] = value;
                 }
             }
             
@@ -643,10 +636,10 @@ namespace Vinteler_Erica_Lab5 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string Subscriber {
                 get {
-                    return ((string)(this[this.tableTable.SubscriberColumn]));
+                    return ((string)(this[this.tablePhoneNumbers3.SubscriberColumn]));
                 }
                 set {
-                    this[this.tableTable.SubscriberColumn] = value;
+                    this[this.tablePhoneNumbers3.SubscriberColumn] = value;
                 }
             }
             
@@ -654,10 +647,10 @@ namespace Vinteler_Erica_Lab5 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int Contact_value {
                 get {
-                    return ((int)(this[this.tableTable.Contact_valueColumn]));
+                    return ((int)(this[this.tablePhoneNumbers3.Contact_valueColumn]));
                 }
                 set {
-                    this[this.tableTable.Contact_valueColumn] = value;
+                    this[this.tablePhoneNumbers3.Contact_valueColumn] = value;
                 }
             }
             
@@ -665,10 +658,10 @@ namespace Vinteler_Erica_Lab5 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public System.DateTime Contact_date {
                 get {
-                    return ((global::System.DateTime)(this[this.tableTable.Contact_dateColumn]));
+                    return ((global::System.DateTime)(this[this.tablePhoneNumbers3.Contact_dateColumn]));
                 }
                 set {
-                    this[this.tableTable.Contact_dateColumn] = value;
+                    this[this.tablePhoneNumbers3.Contact_dateColumn] = value;
                 }
             }
         }
@@ -677,22 +670,22 @@ namespace Vinteler_Erica_Lab5 {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class TableRowChangeEvent : global::System.EventArgs {
+        public class PhoneNumbers3RowChangeEvent : global::System.EventArgs {
             
-            private TableRow eventRow;
+            private PhoneNumbers3Row eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public TableRowChangeEvent(TableRow row, global::System.Data.DataRowAction action) {
+            public PhoneNumbers3RowChangeEvent(PhoneNumbers3Row row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public TableRow Row {
+            public PhoneNumbers3Row Row {
                 get {
                     return this.eventRow;
                 }
@@ -720,7 +713,7 @@ namespace Vinteler_Erica_Lab5.PhoneNumbers3DataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class TableTableAdapter : global::System.ComponentModel.Component {
+    public partial class PhoneNumbers3TableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -732,7 +725,7 @@ namespace Vinteler_Erica_Lab5.PhoneNumbers3DataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public TableTableAdapter() {
+        public PhoneNumbers3TableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -803,7 +796,7 @@ namespace Vinteler_Erica_Lab5.PhoneNumbers3DataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Table";
+            tableMapping.DataSetTable = "PhoneNumbers3";
             tableMapping.ColumnMappings.Add("Id", "Id");
             tableMapping.ColumnMappings.Add("Phonenum", "Phonenum");
             tableMapping.ColumnMappings.Add("Subscriber", "Subscriber");
@@ -872,7 +865,7 @@ SELECT Id, Phonenum, Subscriber, Contact_value, Contact_date FROM [Table] WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(PhoneNumbers3DataSet.TableDataTable dataTable) {
+        public virtual int Fill(PhoneNumbers3DataSet.PhoneNumbers3DataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -885,9 +878,9 @@ SELECT Id, Phonenum, Subscriber, Contact_value, Contact_date FROM [Table] WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual PhoneNumbers3DataSet.TableDataTable GetData() {
+        public virtual PhoneNumbers3DataSet.PhoneNumbers3DataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            PhoneNumbers3DataSet.TableDataTable dataTable = new PhoneNumbers3DataSet.TableDataTable();
+            PhoneNumbers3DataSet.PhoneNumbers3DataTable dataTable = new PhoneNumbers3DataSet.PhoneNumbers3DataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -895,7 +888,7 @@ SELECT Id, Phonenum, Subscriber, Contact_value, Contact_date FROM [Table] WHERE 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(PhoneNumbers3DataSet.TableDataTable dataTable) {
+        public virtual int Update(PhoneNumbers3DataSet.PhoneNumbers3DataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -903,7 +896,7 @@ SELECT Id, Phonenum, Subscriber, Contact_value, Contact_date FROM [Table] WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(PhoneNumbers3DataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Table");
+            return this.Adapter.Update(dataSet, "PhoneNumbers3");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
