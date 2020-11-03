@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Window.Resources>
-        <DataTemplate x:Key="PhoneNumbersTemplate">
+        <DataTemplate x:Key="PhoneNumbers3Template">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="100"/>
@@ -17,8 +17,8 @@
                 <TextBlock Text="{Binding Subscriber}" Grid.Column="1"/>
             </Grid>
         </DataTemplate>
-        <local:PhoneNumbersDataSet x:Key="phoneNumbersDataSet"/>
-        <CollectionViewSource x:Key="phoneNumbersViewSource" Source="{Binding PhoneNumbers,Source={StaticResource phoneNumbersDataSet}}"/>
+        <local:PhoneNumbers3DataSet x:Key="phoneNumbers3DataSet"/>
+        <CollectionViewSource x:Key="phoneNumbers3ViewSource" Source="{Binding PhoneNumbers3,Source={StaticResource phoneNumbers3DataSet}}"/>
     </Window.Resources>
     <Grid x:Name="grdMain" Margin="0,0,10,0" Loaded="grdMain_Loaded">
         <Grid.ColumnDefinitions>
@@ -31,7 +31,7 @@
         <Button x:Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Margin="18,96,0,0" VerticalAlignment="Top" Width="70" Grid.Column="1" Height="20" Click="btnDelete_Click"/>
         <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="115,408,0,0" VerticalAlignment="Top" IsEnabled="False" Width="70" Grid.Column="1" Height="20" Click="btnSave_Click"/>
         <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="508,408,0,0" VerticalAlignment="Top" IsEnabled="False" Width="70" Grid.Column="1" Height="20" Click="btnCancel_Click"/>
-        <ListBox x:Name="lstPhones" Margin="115,13,211,186" Background="#FFDDDDDD" Grid.Column="1" ItemsSource="{Binding}" IsSynchronizedWithCurrentItem="True" ItemTemplate="{StaticResource ResourceKey=PhoneNumbersTemplate}"/>
+        <ListBox x:Name="lstPhones" Margin="115,13,211,186" Background="#FFDDDDDD" Grid.Column="1" ItemsSource="{Binding}" IsSynchronizedWithCurrentItem="True" ItemTemplate="{StaticResource ResourceKey=PhoneNumbers3Template}"/>
         <Button x:Name="btnExit" Content="Exit" HorizontalAlignment="Left" Margin="18,143,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="70" Height="46" Click="btnExit_Click" Grid.Column="1"/>
         <Button x:Name="btnNext" Content="Next" HorizontalAlignment="Left" Margin="115,253,0,0" VerticalAlignment="Top" Width="70" Grid.Column="1" Height="20" Click="btnNext_Click"/>
         <Button x:Name="btnPrevious" Content="Prev" HorizontalAlignment="Left" Margin="508,253,0,0" VerticalAlignment="Top" Width="70" Grid.Column="1" Height="20" Click="btnPrevious_Click"/>
@@ -41,8 +41,8 @@
         <TextBox x:Name="txtSubscriber" HorizontalAlignment="Left" Margin="311,316,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="232" IsEnabled="False" Grid.Column="1" Height="18" Text="{Binding Path=Subscriber}"/>
         <Label x:Name="lblContactValue" Content="Contact Value:" Grid.Column="1" HorizontalAlignment="Left" Margin="150,343,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblContactDate" Content="Contact Date:" Grid.Column="1" HorizontalAlignment="Left" Margin="150,369,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtContactValue" Grid.Column="1" HorizontalAlignment="Left" Margin="311,343,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="232"/>
-        <TextBox x:Name="txtContactDate" Grid.Column="1" HorizontalAlignment="Left" Margin="311,373,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="232" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="txtContactValue" Grid.Column="1" HorizontalAlignment="Left" Margin="311,343,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="232" IsEnabled="False"/>
+        <TextBox x:Name="txtContactDate" Grid.Column="1" HorizontalAlignment="Left" Margin="311,373,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="232" IsEnabled="False" TextChanged="TextBox_TextChanged"/>
 
     </Grid>
 </Window>
